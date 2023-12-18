@@ -1,0 +1,80 @@
+<!-- <div class="app-primary-bg" style="background-image: url('assets/images/bg-img.png');">
+    <div fxLayout="column" fxLayoutAlign="center start" style="background-color: rgb(223, 221, 231);">
+        <div class="title-text" style="text-align: center;">
+            <div fxLayout="row" fxLayoutAlign="center start">
+                <span style="padding-right: 400px; padding-left: 650px;">Job Quest</span>
+                <button mat-raised-button color="primary" style="margin-right: 20px;" (click)="loginPanel()">Login</button>
+                <button mat-raised-button color="primary" (click)="signupPanel()">Signup</button>
+            </div>
+        </div>
+    <div>
+    <div *ngIf="isShowLogin" fxLayout="column nowrap" fxLayoutAlign="flex-start center" style="width: 50%; margin-bottom: 50px; background-color: rgb(141, 141, 229);">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                Employee Login
+            </mat-expansion-panel-header> -->
+            <!-- <div>
+                <mat-form-field appearance="outline" class="item signup-formfield" style="width: 100%;"></mat-form-field>
+            </div> -->
+        <!-- </mat-expansion-panel>
+    </div>
+</div> -->
+<!-- my-page.component.html -->
+
+<div class="page-container" style="background: url('assets/images/bg-img.png'); overflow: auto;">
+    <div class="navbar">
+      <div class="title-text">Job Quest</div>
+      <div class="buttons">
+        <a (click)="showDescription()" href="">about us</a>
+        <button mat-raised-button color="primary" (click)="loginPanel()">Login</button>
+        <button mat-raised-button color="primary" (click)="signupPanel()">Signup</button>   
+      </div>
+    </div>
+
+    <div *ngIf="isShowDesc" style="margin: 20px 0px 0px 20px;">
+        <h1>Description</h1>
+    </div> 
+    <div class="content" *ngIf="isShowLogin" style="margin: 50px 0px 0px 0px;">
+        <mat-expansion-panel hideToggle [expanded]="false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Employee Login
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- <span>Email:</span>
+            <mat-form-field appearance="outline" class="signup-formfield">
+                <input matInput placeholder="your email" required>
+            </mat-form-field> -->
+        </mat-expansion-panel>
+        <mat-expansion-panel hideToggle [expanded]="isFirstPanelOpen" (opened)="onPanelClicked()">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Employer Login
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- <p>Employer</p> -->
+        </mat-expansion-panel>
+    </div>
+    <div class="content" *ngIf="isShowSignup" style="margin: 50px 0px 0px 0px;">
+        <mat-expansion-panel hideToggle [expanded]="false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Employee Signup
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- <span>Email:</span>
+            <mat-form-field appearance="outline" class="signup-formfield">
+                <input matInput placeholder="your email" required>
+            </mat-form-field> -->
+        </mat-expansion-panel>
+        <mat-expansion-panel hideToggle [expanded]="isFirstPanelOpen" (opened)="onPanelClicked()">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Employer Signup
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- <p>Employer</p> -->
+        </mat-expansion-panel>
+    </div>
+</div>
+  
