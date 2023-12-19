@@ -23,16 +23,52 @@
 
 <div class="page-container" style="background: url('assets/images/bg-img.png'); overflow: auto;">
     <div class="navbar">
-      <div class="title-text">Job Quest</div>
-      <div class="buttons">
-        <a (click)="showDescription()" href="">about us</a>
+      <div  fxLayout="row" fxLayoutAlign="center">
+        <div (click)="showDescription()" style="cursor: pointer;" class="name-text">Job Quest</div>
+        <div class="subheading-text">Navigating Careers, Fulfilling Dreams</div>
+      </div>
+      <div class="buttons" style="padding-top: 15px;">
+        <a style="padding-top: 8px;" (click)="showDescription()" href="">about us</a>
         <button mat-raised-button color="primary" (click)="loginPanel()">Login</button>
         <button mat-raised-button color="primary" (click)="signupPanel()">Signup</button>   
       </div>
     </div>
 
     <div *ngIf="isShowDesc" style="margin: 20px 0px 0px 20px;">
-        <h1>Description</h1>
+        <section>
+          <mat-card class="mat-card" style="margin-bottom: 30px;" (mouseenter)="isshowContent1 = true" (mouseleave)="isshowContent1 = false">
+            <div class="title-text">Discover Your Professional Destiny</div>
+            <div *ngIf="isshowContent1">
+              <p>Embark on a seamless adventure with Job Quest as you navigate through a curated selection of opportunities tailored to match your unique skills and aspirations. Our user-friendly interface empowers you to effortlessly explore a myriad of industries, unlocking doors to your dream job.</p>
+            </div>
+          </mat-card>
+
+        <mat-card class="mat-card" style="margin-bottom: 30px;" (mouseenter)="isshowContent2 = true" (mouseleave)="isshowContent2 = false">
+            <div class="title-text">Tailored for Success</div>
+            <p *ngIf="isshowContent2">At Job Quest, we understand the significance of personalization in your job search. Our advanced algorithms ensure that your job recommendations align perfectly with your skills, experience, and career goals. Say goodbye to generic searches—welcome a tailored experience designed for your success.</p>
+        </mat-card>
+
+        <mat-card class="mat-card" style="margin-bottom: 30px;" (mouseenter)="isshowContent3 = true" (mouseleave)="isshowContent3 = false">
+            <div class="title-text">Job Quest Community</div>
+            <p *ngIf="isshowContent3">Connect with like-minded professionals and industry leaders through our vibrant community. Share insights, seek advice, and network with individuals who are as passionate about their careers as you are. Job Quest is not just a platform; it's a supportive community that propels you towards your professional zenith.</p>
+        </mat-card>
+
+        <mat-card class="mat-card" style="margin-bottom: 30px;" (mouseenter)="isshowContent4 = true" (mouseleave)="isshowContent4 = false">
+            <div class="title-text">Unleash Your Potential</div>
+            <p *ngIf="isshowContent4">Our commitment goes beyond just job listings; we are devoted to nurturing your growth. Access resources, webinars, and career guides that empower you to hone your skills, stay updated on industry trends, and enhance your professional repertoire.</p>
+        </mat-card>
+
+        <mat-card class="mat-card" style="margin-bottom: 30px;" (mouseenter)="isshowContent5 = true" (mouseleave)="isshowContent5 = false">
+            <div class="title-text">Job Quest Premium: Elevate Your Experience</div>
+            <p *ngIf="isshowContent5">For those seeking an elevated journey, Job Quest Premium offers exclusive features such as early access to job opportunities, personalized career coaching, and enhanced visibility to top recruiters. Elevate your career aspirations with a premium membership tailored to unlock unparalleled possibilities.</p>
+        </mat-card>
+
+        <mat-card class="mat-card" style="margin-bottom: 30px;" (mouseenter)="isshowContent6 = true" (mouseleave)="isshowContent6 = false">
+            <div class="title-text">Your Success Story Begins Here</div>
+            <p *ngIf="isshowContent6">Job Quest isn't just a website; it's the launchpad for your career aspirations. Let your success story unfold with us as your trusted companion. Join Job Quest today and step into a world where every click brings you closer to the career you've always dreamed of.</p>
+        </mat-card>
+      </section>
+  
     </div> 
     <div class="content" *ngIf="isShowLogin" style="margin: 50px 0px 0px 0px;">
         <mat-expansion-panel hideToggle [expanded]="false">

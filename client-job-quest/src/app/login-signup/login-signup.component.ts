@@ -13,6 +13,13 @@ export class LoginSignupComponent implements OnInit{
   isShowSignup: boolean = false;
   isShowDesc: boolean = true;
   isFirstPanelOpen: boolean = false;
+  isshowContent1: boolean = false;
+  isshowContent2: boolean = false;
+  isshowContent3: boolean = false;
+  isshowContent4: boolean = false;
+  isshowContent5: boolean = false;
+  isshowContent6: boolean = false;
+
 
   constructor(private router: Router){}
 
@@ -37,5 +44,6 @@ export class LoginSignupComponent implements OnInit{
   showDescription() {
     this.isShowDesc = true;
     this.isShowLogin = false;
+    this.isShowSignup = false;
   }
 }

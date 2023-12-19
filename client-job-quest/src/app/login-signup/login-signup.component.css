@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 0px 16px 10px 16px;
     background-color: rgba(255, 255, 255); 
 }
 
@@ -68,4 +68,16 @@
 		background-color: white;
 		border-radius: 5px;
 	}
+}
+.mat-card {
+    background-color: #fafbfb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(75, 146, 200, 0.1);
+    padding: 20px;
+    width: 500px;
+    margin-left: -300px;
+}
+section {
+    max-width: 800px;
+    margin: 20px auto;
 }
